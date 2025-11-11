@@ -1,0 +1,207 @@
+/* Page Header */
+.page-header {
+    background: linear-gradient(to right, #6366f1, #8b5cf6, #ec4899);
+    color: #fff;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    margin-bottom: 2.5rem;
+  }
+  .page-header h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  .page-header p {
+    font-size: 1.125rem;
+    opacity: 0.9;
+  }
+  
+  /* Stat Cards */
+  .stat-card {
+    background: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  .stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  }
+  .stat-card .value {
+    font-size: 1.875rem;
+    font-weight: 800;
+    margin-top: 0.25rem;
+    color: #111827;
+  }
+  .stat-card .icon-box {
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Quick Actions */
+  .quick-actions {
+    background: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .quick-actions h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+  }
+  .actions-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  @media (min-width: 768px) {
+    .actions-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1024px) {
+    .actions-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .quick-action {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    color: #111827;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    /* Bỏ gạch chân */
+    text-decoration: none;
+  }
+  .quick-action:hover {
+    transform: scale(1.05);
+  }
+  .quick-action svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  /* Activity Cards */
+  .activity-card {
+    background: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    padding: 1.5rem;
+    margin-top: 20px;
+  }
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  .card-header h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #111827;
+  }
+  .list-item {
+    display: flex;
+    /* align-items: center; */
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    background: #f9fafb;
+    transition: background 0.2s ease;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .list-item:hover {
+    background: #f3f4f6;
+  }
+  .list-item .avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    /* color: #fff; */
+    flex-shrink: 0;
+    background-color: #6366f1;
+  }
+  
+  /* Error & Loader */
+  .error-box {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #dc2626;
+    font-size: 0.875rem;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
+  .loader {
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.875rem;
+    color: #6b7280;
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
+  
+  .stat-card-modern {
+    margin-bottom: 10px;
+    background: #fff;
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+  }
+  .stat-card-modern:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  }
+  .icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    border-radius: 9999px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+  .trend-up {
+    color: #16a34a; /* xanh lá */
+    font-weight: 600;
+  }
+  
+
+  .text-stat {
+    text-decoration: none;
+  }
+
+  .link-stat {
+    text-decoration: none;
+  }
+
+  .icon-stat {
+    color: #111827;
+    text-decoration: none;
+  }
+
+.text-right {
+    /* tách phần tử trải ra 2 đầu trái và phải */
+    float: right;
+}

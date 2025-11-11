@@ -1,0 +1,411 @@
+/* Workouts Page Specific Styles */
+
+/* ==================== WORKOUT CARD STYLES ==================== */
+
+.workout-card {
+  position: relative;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.workout-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #10b981, #059669);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.workout-card:hover::before {
+  transform: scaleX(1);
+}
+
+.workout-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.1);
+  border-color: #10b981;
+}
+
+/* image */
+.workout-image-container {
+  position: relative;
+  width: 100%;
+  /* aspect-ratio: 16 / 9; */
+  background: #e5e7eb;
+}
+
+/* body */
+.workout-card-body {
+  padding: 1.25rem 1.25rem 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.workout-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.workout-card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.workout-card-badge {
+  padding: 0.25rem 0.75rem;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.workout-card-content {
+  margin-bottom: 1.5rem;
+}
+
+.workout-card-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.workout-card-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.workout-card-description {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.workout-card-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* ==================== BEAUTIFIED BUTTONS ==================== */
+.workout-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 2.75rem; /* 44px */
+  padding: 0 1rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.workout-btn-primary {
+  color: #ffffff;
+  background: linear-gradient(135deg, #10b981, #059669);
+  box-shadow: 0 8px 20px -6px rgba(16, 185, 129, 0.45);
+  border: none;
+}
+.workout-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px -8px rgba(16, 185, 129, 0.55);
+}
+.workout-btn-primary:active {
+  transform: translateY(0);
+}
+
+.workout-btn-outline {
+  background: #ffffff;
+  color: #374151;
+  border: 2px solid #e5e7eb;
+}
+.workout-btn-outline:hover {
+  border-color: #10b981;
+  color: #0f766e;
+  background: #f9fafb;
+}
+
+/* ==================== WORKOUT FILTERS ==================== */
+
+.workout-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.workout-filter-btn {
+  padding: 0.5rem 1rem;
+  background: white;
+  color: #6b7280;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.workout-filter-btn:hover {
+  border-color: #10b981;
+  color: #10b981;
+}
+
+.workout-filter-btn.active {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  border-color: #10b981;
+}
+
+/* ==================== WORKOUT PROGRESS ==================== */
+
+.workout-progress-bar {
+  width: 100%;
+  height: 0.5rem;
+  background: #f3f4f6;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.workout-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981, #059669);
+  border-radius: 0.25rem;
+  transition: width 0.5s ease;
+}
+
+.workout-progress-text {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+
+/* ==================== EXERCISE LIST ==================== */
+
+.exercise-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ==================== EMPTY STATE ==================== */
+.empty-illustration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.empty-illustration svg {
+  width: 72px;
+  height: 72px;
+}
+
+.exercise-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f9fafb;
+  border: 1px solid #f3f4f6;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.exercise-item:hover {
+  background: #f3f4f6;
+  border-color: #e5e7eb;
+}
+
+.exercise-item.completed {
+  background: #ecfdf5;
+  border-color: #bbf7d0;
+}
+
+.exercise-checkbox {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid #d1d5db;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.exercise-checkbox.checked {
+  background: #10b981;
+  border-color: #10b981;
+}
+
+.exercise-info {
+  flex: 1;
+}
+
+.exercise-name {
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.exercise-details {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.exercise-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+@media (max-width: 768px) {
+  .workout-card {
+    padding: 1rem;
+  }
+  
+  .workout-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .workout-card-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .workout-filters {
+    flex-direction: column;
+  }
+  
+  .workout-card-actions {
+    justify-content: stretch;
+  }
+  
+  .workout-card-actions .btn {
+    flex: 1;
+  }
+}
+
+/* ==================== DASHBOARD/HEADER SUPPORT ==================== */
+.dashboard-section {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+}
+
+/* ==================== STATS GRID ==================== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.stat-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.stat-card:hover {
+  box-shadow: 0 10px 24px -8px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+}
+
+.stat-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.stat-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.75rem;
+}
+
+.stat-icon.blue { background: #eff6ff; color: #2563eb; }
+.stat-icon.green { background: #ecfdf5; color: #059669; }
+.stat-icon.orange { background: #fff7ed; color: #f97316; }
+.stat-icon.purple { background: #f5f3ff; color: #7c3aed; }
+
+.stat-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* ==================== TABS WRAPPER ENHANCEMENTS ==================== */
+.btn { /* leverage existing utility names in page */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  height: 2.5rem;
+  padding: 0 1rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #ffffff;
+  box-shadow: 0 8px 20px -6px rgba(99, 102, 241, 0.35);
+}
+
+.btn-primary:hover { opacity: 0.95; transform: translateY(-1px); }
+.btn-outline {
+  background: #ffffff;
+  color: #4b5563;
+  border: 2px solid #e5e7eb;
+}
+.btn-outline:hover { border-color: #7c3aed; color: #3730a3; }
+
+/* ==================== EMPTY STATE ==================== */
+.empty-illustration svg {
+  width: 64px;
+  height: 64px;
+}
+
+
+.history-item{
+  padding: 12px;
+}

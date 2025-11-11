@@ -1,0 +1,67 @@
+.landing{background:radial-gradient(1200px 600px at -10% -10%,rgba(34,197,94,.15),transparent 60%),radial-gradient(1200px 600px at 110% 110%,rgba(217,70,239,.14),transparent 60%),#0b0b10;color:#fff}
+.landing-header{padding:24px;display:flex;align-items:center;justify-content:space-between}
+.landing-nav{display:flex;gap:8px}
+.btn-primary{padding:12px 24px;border-radius:12px;background:#2563eb;color:#fff;text-decoration:none;transition:.2s box-shadow,.2s transform;box-shadow:0 10px 25px rgba(37,99,235,.25)}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 14px 30px rgba(37,99,235,.35)}
+.btn-secondary{padding:12px 24px;border-radius:12px;background:rgba(255,255,255,.08);text-decoration:none;border:1px solid rgba(255,255,255,.08);transition:.2s}
+.btn-secondary:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.18)}
+.landing-hero{padding:40px 24px 64px}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08);font-size:12px;color:rgba(255,255,255,.85);margin-bottom:16px}
+.hero-title{font-size:clamp(32px,4vw,48px);font-weight:800;letter-spacing:-.02em;line-height:1.15;margin:0 0 16px}
+.hero-sub{color:rgba(255,255,255,.75);font-size:18px;max-width:58ch;margin-bottom:28px}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+.stats{margin-top:28px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;text-align:center;color:rgba(255,255,255,.85)}
+.stats-value{font-size:22px;font-weight:800}
+.stats-label{margin-top:4px;font-size:12px;color:rgba(255,255,255,.7)}
+.hero-visual{position:relative;aspect-ratio:4/3;border-radius:20px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(6px);overflow:hidden}
+.hero-visual-mesh{position:absolute;inset:0;opacity:.13;background:radial-gradient(400px 400px at 20% 20%,#22c55e,transparent 60%),radial-gradient(400px 400px at 80% 30%,#8b5cf6,transparent 55%),radial-gradient(400px 400px at 50% 80%,#06b6d4,transparent 55%)}
+.visual-grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:24px}
+.visual-grid .card{height:112px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}
+.visual-grid .card.wide{grid-column:span 2}
+.features{padding:0 24px 48px}
+.features-grid{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:16px}
+@media(min-width:768px){.features-grid{grid-template-columns:repeat(4,1fr)}}
+.testimonials{padding:0 24px 64px}
+.testimonials-grid{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:16px}
+@media(min-width:768px){.testimonials-grid{grid-template-columns:repeat(3,1fr)}}
+.cta-section{padding:0 24px 80px}
+.cta{border-radius:20px;background:linear-gradient(90deg,#2563eb,#d946ef);padding:24px}
+@media(min-width:768px){.cta{padding:40px}}
+.cta-inner{display:flex;flex-direction:column;gap:16px;align-items:center;justify-content:space-between}
+@media(min-width:768px){.cta-inner{flex-direction:row}}
+.cta-title{font-size:clamp(20px,3vw,28px);font-weight:800;margin-bottom:2px}
+.cta-sub{color:#fff;opacity:.92}
+.cta-actions{display:flex;gap:12px}
+.btn-dark{padding:12px 20px;border-radius:12px;background:rgba(0,0,0,.9);color:#fff;text-decoration:none}
+.btn-light{padding:12px 20px;border-radius:12px;background:rgba(255,255,255,.25);color:#fff;text-decoration:none}
+.landing-footer{padding:0 24px 40px;color:rgba(255,255,255,.55);font-size:13px}
+
+.hero-title {
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    background: linear-gradient(90deg,#fff,#a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInUp 1s ease;
+  }
+  .hero-sub {
+    animation: fadeInUp 1.2s ease;
+  }
+  .stats-value {
+    font-size: 26px;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255,255,255,.4);
+  }
+  @keyframes fadeInUp {
+    from { opacity:0; transform:translateY(20px); }
+    to { opacity:1; transform:translateY(0); }
+  }
+  .hero-visual:hover {
+    transform: scale(1.01);
+    transition: transform 0.5s ease;
+  }
+  

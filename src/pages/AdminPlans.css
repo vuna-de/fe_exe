@@ -1,0 +1,64 @@
+.admin-page { min-height:100vh; background:linear-gradient(to br,#f9fafb,#f3f4f6); padding:2rem; }
+.page-header { margin-bottom:2rem; }
+.page-header h1 { font-size:2rem; font-weight:800; color:#111827; margin-bottom:.5rem; }
+.page-header p { color:#6b7280; }
+
+/* Filter */
+.filter-card { background:#fff; border-radius:1rem; padding:1.5rem; margin-bottom:1.5rem; box-shadow:0 2px 6px rgba(0,0,0,.05); }
+.filters-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; align-items:end; }
+.filters-grid label { font-size:.85rem; font-weight:500; color:#374151; margin-bottom:.25rem; }
+.filters-grid input, .filters-grid select {
+  width:100%; padding:.5rem .75rem; border:1px solid #d1d5db; border-radius:.5rem;
+}
+.filters-grid input:focus, .filters-grid select:focus { border-color:#2563eb; outline:none; box-shadow:0 0 0 2px rgba(37,99,235,.2); }
+.btn-group { display:flex; gap:.5rem; }
+
+/* Buttons */
+.btn { padding:.5rem 1rem; border-radius:.5rem; font-weight:500; cursor:pointer; transition:.2s; }
+.btn-primary { background:#2563eb; color:#fff; } .btn-primary:hover { background:#1d4ed8; }
+.btn-secondary { background:#6b7280; color:#fff; } .btn-secondary:hover { background:#4b5563; }
+.btn-success { background:#16a34a; color:#fff; } .btn-success:hover { background:#15803d; }
+
+/* Error */
+.error-box { background:#fee2e2; border:1px solid #fecaca; color:#dc2626; padding:1rem; border-radius:.75rem; margin-bottom:1rem; }
+
+/* Table */
+.table-card { background:#fff; border-radius:1rem; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.05); }
+.table-header { padding:1rem 1.5rem; font-weight:600; border-bottom:1px solid #e5e7eb; }
+.table-wrapper { overflow-x:auto; }
+table { width:100%; border-collapse:collapse; }
+thead { background:#f9fafb; }
+th { padding:.75rem 1.5rem; font-size:.75rem; text-transform:uppercase; color:#6b7280; text-align:left; }
+td { padding:.75rem 1.5rem; font-size:.875rem; }
+tr:hover { background:#f9fafb; }
+.badge { padding:.25rem .75rem; border-radius:9999px; font-size:.75rem; font-weight:600; text-transform:capitalize; }
+.badge.workout { background:#dbeafe; color:#1e40af; }
+.badge.meal { background:#f3e8ff; color:#6d28d9; }
+.truncate { max-width:200px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.actions { display:flex; gap:.5rem; }
+.btn-action { font-size:.8rem; font-weight:500; padding:.25rem .75rem; border-radius:.375rem; transition:.2s; }
+.btn-action.edit { background:#eff6ff; color:#2563eb; }
+.btn-action.edit:hover { background:#dbeafe; }
+.btn-action.delete { background:#fee2e2; color:#dc2626; }
+.btn-action.delete:hover { background:#fecaca; }
+.no-data { text-align:center; padding:2rem; color:#6b7280; }
+
+/* Pagination */
+.pagination { margin-top:1.5rem; display:flex; justify-content:space-between; align-items:center; }
+.pagination button { background:#f3f4f6; border:none; padding:.5rem 1rem; border-radius:.5rem; cursor:pointer; transition:.2s; }
+.pagination button:hover { background:#e5e7eb; }
+.pagination button:disabled { opacity:.5; cursor:not-allowed; }
+
+/* Modal */
+.modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,.5); display:flex; align-items:center; justify-content:center; z-index:50; padding:1rem; }
+.modal-card { background:#fff; border-radius:1rem; box-shadow:0 10px 25px rgba(0,0,0,.1); max-width:600px; width:100%; max-height:90vh; overflow-y:auto; }
+.modal-header { display:flex; justify-content:space-between; align-items:center; padding:1rem 1.5rem; border-bottom:1px solid #e5e7eb; }
+.modal-header h3 { font-weight:600; }
+.close-btn { background:none; border:none; font-size:1.2rem; cursor:pointer; }
+.modal-body { padding:1.5rem; }
+.form-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; }
+.form-grid input, .form-grid select, .form-grid textarea {
+  width:100%; padding:.5rem .75rem; border:1px solid #d1d5db; border-radius:.5rem;
+}
+.form-grid input:focus, .form-grid select:focus, .form-grid textarea:focus { border-color:#2563eb; outline:none; box-shadow:0 0 0 2px rgba(37,99,235,.2); }
+.modal-actions { margin-top:1.5rem; display:flex; justify-content:flex-end; gap:.5rem; }

@@ -1,0 +1,43 @@
+/* Settings Page Specific Styles */
+
+/* Header subtitle spacing */
+.section-header p {
+  margin-top: 0.25rem;
+}
+
+/* Settings quick action overrides to harmonize tones */
+.dashboard-quick-action + .dashboard-quick-action {
+  margin-top: 0.5rem;
+}
+
+/* Toggle group alignment in settings rows */
+.settings-control-group {
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+/* Danger zone emphasis */
+.settings-danger h4 {
+  color: #991b1b;
+}
+.settings-danger p {
+  color: #b91c1c;
+}
+
+.input{
+  /* max-width: fit-content; */
+}
+
+.input-fit-content {
+  max-width: fit-content;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .settings-control-group {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+

@@ -1,0 +1,310 @@
+Overlay giống ManualPlanModal
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    padding: 1rem;
+  }
+  
+  .modal-card {
+    background: #fff;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 840px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: scaleIn 0.3s ease;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .modal-header .title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #10b981, #059669);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .close-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: #6b7280;
+  }
+  .close-btn:hover { color: #111827; }
+  
+  .modal-body {
+    padding: 1.5rem;
+    overflow-y: auto;
+    flex-grow: 1;
+  }
+  
+  /* Form sections */
+  .form-section { margin-bottom: 1.5rem; }
+  .form-section label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+  .stack { display: flex; flex-direction: column; gap: 0.5rem; }
+  
+  /* Selection cards */
+  .select-card, .select-row {
+    border: 2px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .select-card:hover, .select-row:hover { border-color: #9ca3af; }
+  .select-card.active, .select-row.active {
+    border-color: #10b981;
+    background: #ecfdf5;
+    box-shadow: 0 4px 12px rgba(16,185,129,0.2);
+  }
+  .select-card .icon { font-size: 1.5rem; margin-right: 0.5rem; }
+  
+  /* Inputs */
+  .input-icon { position: relative; }
+  .input-icon input {
+    width: 100%;
+    padding: 0.5rem 0.75rem 0.5rem 2rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+  }
+  .input-icon svg {
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+  }
+  
+  /* Buttons */
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: #fff;
+    padding: 0.6rem 1.25rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+  .btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
+  .btn-outline {
+    border: 1px solid #d1d5db;
+    background: #fff;
+    padding: 0.6rem 1.25rem;
+    border-radius: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .btn-outline:hover { background: #f9fafb; }
+  
+  /* Error + Success */
+  .error-alert {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #b91c1c;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .success-card {
+    text-align: center;
+    padding: 2rem;
+  }
+  .success-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: #dcfce7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1rem;
+  }
+  .success-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .success-card p { color: #4b5563; margin-bottom: 1rem; }
+  .loader {
+    border: 3px solid #e5e7eb;
+    border-top: 3px solid #10b981;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Animations */
+  @keyframes spin { 100% { transform: rotate(360deg); } }
+  @keyframes scaleIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+  
+  .select-row input[type="radio"],
+  .select-row input[type="checkbox"] {
+    display: none;
+  }
+  
+
+  .select-row.active, .select-card.active {
+    border-color: #059669;
+    background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+    box-shadow: 0 6px 14px rgba(16,185,129,0.25);
+  }
+  
+
+  .select-row span {
+    flex: 1;
+  }
+  .select-row.active::after {
+    content: "✔";
+    color: #059669;
+    font-weight: bold;
+    margin-left: auto;
+  }
+  
+  .loader.small {
+    width: 16px;
+    height: 16px;
+    border-width: 2px;
+  }
+  
+
+  .success-card {
+    text-align: center;
+    padding: 2rem;
+    animation: fadeInUp 0.5s ease;
+  }
+  @keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+
+  .form-section.grid-2 {
+    background: #f9fafb;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .input-icon input {
+    width: 100%;
+    padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    background: white;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+  }
+  .input-icon input:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16,185,129,0.2);
+    outline: none;
+  }
+  .input-icon svg {
+    position: absolute;
+    top: 50%;
+    left: 0.6rem;
+    width: 1rem;
+    height: 1rem;
+    color: #9ca3af;
+    transform: translateY(-50%);
+  }
+  
+  .form-section select {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    background: white;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+  }
+  .form-section select:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16,185,129,0.2);
+    outline: none;
+  }
+  
+  .form-section label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.4rem;
+  }
+  .input-icon svg {
+    position: absolute;
+    top: 50%;
+    left: 0.6rem;
+    width: 1rem;
+    height: 1rem;
+    color: #9ca3af;
+    transform: translateY(-50%);
+    pointer-events: none; /* Quan trọng để không chặn input */
+  }
+  .input-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+
+  .input-icon {
+    position: relative;
+    width: 100%;
+  }
+  
+  .input-icon .icon {
+    position: absolute;
+    top: 50%;
+    left: 0.75rem;
+    transform: translateY(-50%);
+    width: 1.2rem;
+    height: 1.2rem;
+    color: #9ca3af;
+    pointer-events: none; /* Không chặn click */
+  }
+  
+  .input-icon input {
+    width: 100%;
+    padding: 0.6rem 0.75rem 0.6rem 2.5rem; /* Chừa chỗ cho icon */
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    background: #fff;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+  }
+  
+  .input-icon input:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+    outline: none;
+  }
+  

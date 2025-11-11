@@ -1,0 +1,94 @@
+.detail-card {
+  max-width: 720px;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #10b981, #059669);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+}
+.info-card:hover {
+  border-color: #10b981;
+  background: #f0fdf4;
+}
+.info-card .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #059669;
+}
+.info-card .label {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+.info-card .value {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #111827;
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+.section-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #111827;
+}
+.section-content {
+  font-size: 0.9rem;
+  color: #374151;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.exercise-list {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+}
+.exercise-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+.exercise-item:last-child {
+  border-bottom: none;
+}
+.exercise-name {
+  font-weight: 500;
+  color: #111827;
+}
+.exercise-detail {
+  color: #6b7280;
+}
+.empty {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
