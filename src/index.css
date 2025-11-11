@@ -312,7 +312,7 @@ body {
   justify-content: space-between;
   gap: 0.5rem;
   cursor: pointer;
-  transition:  0.15s ease;
+  transition: 0.15s ease;
 }
 
 .global-search-item:hover {
@@ -349,7 +349,7 @@ body {
 .noti-markall{font-size:12px;color:#93c5fd;background:transparent;border:none;cursor:pointer}
 .noti-empty{padding:16px;color:rgba(255,255,255,.7)}
 .noti-list{max-height:360px;overflow:auto}
-.noti-item{padding:12px;border-bottom:1px solid rgba(255,255,255,.06);cursor:pointer;transition: .15s ease;color:#e5e7eb}
+.noti-item{padding:12px;border-bottom:1px solid rgba(255,255,255,.06);cursor:pointer;transition:.15s ease;color:#e5e7eb}
 .noti-item:hover{background:rgba(255,255,255,.04)}
 .noti-item.unread{background:rgba(59,130,246,.08)}
 .noti-title{font-weight:600;margin-bottom:4px}
@@ -524,7 +524,7 @@ body {
   justify-content: space-between;
   padding: 1rem 1.5rem;
   border-bottom: 1px solid #f1f5f9;
-  transition:  0.2s;
+  transition: 0.2s;
 }
 
 .workout-item:hover {
